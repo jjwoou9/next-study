@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 
 export default function Links() {
   const router = useRouter();
+
   useEffect(() => {
     router.prefetch('/section1/getStaticProps');
   }, [router]);
