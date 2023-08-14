@@ -12,21 +12,21 @@ const Images: NextPage = () => {
 
             <hr style={{ margin: '32px 0' }} />
 
-            {/*<h1>img tag</h1>*/}
+            <h1>img tag</h1>
 
-            {/*<figure>*/}
-            {/*  <img*/}
-            {/*    src="https://inflearn-nextjs.vercel.app/example.jpg"*/}
-            {/*    alt="example"*/}
-            {/*    width={500}*/}
-            {/*    height={100}*/}
-            {/*    https://web.dev/browser-level-image-lazy-loading/ */}
-            {/*    // loading="lazy"*/}
-            {/*  />*/}
-            {/*  <figcaption>example img</figcaption>*/}
-            {/*</figure>*/}
+            <figure>
+              <img
+                src="https://inflearn-nextjs.vercel.app/example.jpg"
+                alt="example"
+                width={500}
+                height={100}
+                // https://web.dev/browser-level-image-lazy-loading/
+                loading="lazy"
+              />
+              <figcaption>example img</figcaption>
+            </figure>
 
-            {/*<hr style={{ margin: '32px 0' }} />*/}
+            <hr style={{ margin: '32px 0' }} />
 
             <h1>next/image</h1>
 
