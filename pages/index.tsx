@@ -2,9 +2,10 @@ import { Fragment, useEffect } from 'react';
 import { NextPage } from 'next';
 import Header from '../components/home/Header';
 import MapSection from '../components/home/MapSection';
+import DetailSection from '../components/home/DetailSection';
 import { Store } from '../types/store';
 import useStores from '../hooks/useStores';
-import DetailSection from '@/components/home/DetailSection';
+import { NextSeo } from 'next-seo';
 
 interface Props {
   stores: Store[];
@@ -19,6 +20,14 @@ const Home: NextPage<Props> = ({ stores }) => {
 
   return (
     <Fragment>
+      <NextSeo
+        title="매장 지도"
+        description="Next.js 시작하기 강의를 위한 매장 지도 서비스입니다."
+        canonical="https://inflearn-nextjs.vercel.app"
+        openGraph={{
+          url: 'https://inflearn-nextjs.vercel.app',
+        }}
+      />
       <Header />
       <main
         style={{
