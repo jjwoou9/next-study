@@ -52,7 +52,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const stores = (await import('../public/stores.json')).default;
   const paths = stores.map((store) => ({ params: { name: store.name } }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: false }; //true : false : "blocking"
+  //false : 빌드 타임에 모두 만들고 찾을 수 없는 경로면 404
+  //true : 빌드 타임에 경로 생성. 바로 404로 띄우지는 않음. => getStaticProps를 호출 하고 없을 때 404 호출
+  //"blocking" : 등록되지 않은 url은 바로 404가 아니라 true 처럼 getStatic Props를 호출. true와 달리 경로 이동 전 까지 UI를 block 시킵니다.
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
